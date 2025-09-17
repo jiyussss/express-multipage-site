@@ -1,12 +1,128 @@
-body{
-    font-family: Arial, sans-serif;
-    text-align: center;
+/* === Global Reset & Base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-nav{
-    margin-top: 20px;
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #444A44; /* Primary text — soft dark green-gray */
+    background-color: #FAFCFB; /* Lightest tone — airy background */
+    padding: 2.5rem 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
-a {
+
+/* === Typography === */
+h1 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5rem;
+    color: #222623; /* Deepest tone — strong, grounded heading */
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: #222623;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #444A44;
+}
+
+/* === Navigation === */
+nav {
+    margin: 2.5rem 0 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #D3D9D5; /* Mid-tone divider */
+}
+
+nav a {
+    color: #666E67; /* Medium-dark — subtle but readable */
     text-decoration: none;
-    margin: 10px;
-    color: #333;
+    margin: 0 1rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding: 0.35rem 0.6rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
 }
+
+nav a:hover {
+    color: #222623; /* Deep tone on hover — adds focus */
+    background-color: #E6EBE8; /* Light hover tint — gentle feedback */
+}
+
+/* === Blog Posts === */
+#texts {
+    margin-top: 2.5rem;
+}
+
+article {
+    background: #FFFFFF;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(34, 38, 35, 0.04);
+    border-left: 4px solid #AEB5B0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 38, 35, 0.08);
+    background-color: #F8FAF9;
+}
+
+article h2 {
+    color: #222623;
+    text-align: left; /* Keep headings left-aligned */
+}
+
+article p {
+    color: #444A44;
+    font-size: 1rem;
+    line-height: 2;
+    text-align: justify !important; /* Explicitly justify paragraph text */
+    text-justify: inter-word; /* Better word spacing for justification */
+}
+
+article p em {
+    color: #89918B;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center; /* Keep metadata left-aligned */
+    display: block; /* Make em elements block-level */
+}
+
+/* === Status Messages === */
+#texts p {
+    font-style: italic;
+    color: #89918B;
+    text-align: center;
+    padding: 2rem;
+    background-color: #E6EBE8; /* Light container */
+    border-radius: 8px;
+    border: 1px solid #D3D9D5;
+}
+
+/* === Accents & Highlights === */
+strong, b {
+    color: #222623; /* Deep tone for emphasis */
+    font-weight: 600;
+}
+
+/* === Subtle Dividers or Rules === */
+hr {
+    border: 0;
+    height: 1px;
+    background: #D3D9D5;
+    margin: 2rem 0;
+}
+

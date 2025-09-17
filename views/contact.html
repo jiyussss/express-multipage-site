@@ -4,14 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>   
 <body>
      <h1>Contact page</h1>
     <nav>
-            <a href="/">Home</a> |
-            <a href="/about">About</a> |
-            <a href="/contact">Contact</a>
+        <a href="/">Home</a> |
+        <a href="/about">About</a> |
+        <a href="/contact">Contact</a> |
+        <a href="/blog">Blog</a>
     </nav>
+    <p>This is the Home page of our multi-page Express site.</p>
+
+    <div id="texts">
+        <p>Loading content...</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const container = document.getElementById('texts');
+
+            try {
+                const response = await fetch('/hotline'); // ← Fetches contact.json via Express route
+                if (!response.ok) throw new Error('Failed to load contact info');
+
+                const contact = await response.json(); // ← Single object, NOT array
+
+                // Render contact info
+                container.innerHTML = `
+                    <div>
+                        <h2>Contact Information</h2>
+                        <p><strong>Email:</strong> ${contact.email || "N/A"}</p>
+                        <p><strong>Phone:</strong> ${contact.phone || "N/A"}</p>
+                        <p><strong>Address:</strong> ${contact.address || "N/A"}</p>
+                        ${contact.hours ? `<p><strong>Hours:</strong> ${contact.hours}</p>` : ''}
+                    </div>
+                `;
+
+            } catch (error) {
+                console.error('Error fetching contact info:', error);
+                container.innerHTML = '<p>Failed to load contact information. Please try again later.</p>';
+            }
+        });
+    </script>
 </body>
 </html>
+
+
+
