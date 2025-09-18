@@ -14,7 +14,7 @@
         <a href="/contact">Contact</a> |
         <a href="/blog">Blog</a>
     </nav>
-    <p>This is the Home page of our multi-page Express site.</p>
+    <p>This is the contact page of my multi-page Express site.</p>
 
     <div id="texts">
         <p>Loading content...</p>
@@ -24,12 +24,9 @@
             const container = document.getElementById('texts');
 
             try {
-                const response = await fetch('/hotline'); // ← Fetches contact.json via Express route
+                const response = await fetch('/hotline');
                 if (!response.ok) throw new Error('Failed to load contact info');
-
-                const contact = await response.json(); // ← Single object, NOT array
-
-                // Render contact info
+                const contact = await response.json();
                 container.innerHTML = `
                     <div>
                         <h2>Contact Information</h2>

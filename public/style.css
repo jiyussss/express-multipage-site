@@ -1,128 +1,100 @@
-/* === Global Reset & Base === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.7;
-    color: #444A44; /* Primary text — soft dark green-gray */
-    background-color: #FAFCFB; /* Lightest tone — airy background */
-    padding: 2.5rem 1.25rem;
+    color: #444A44;
+    background-color: #FAFCFB;
+    padding: 40px 20px;
     max-width: 800px;
     margin: 0 auto;
 }
-
-/* === Typography === */
 h1 {
-    font-size: 2.4rem;
+    font-size: 38px;
     font-weight: 400;
     letter-spacing: -0.5px;
-    margin-bottom: 1.5rem;
-    color: #222623; /* Deepest tone — strong, grounded heading */
-}
-
-h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
+    margin-bottom: 24px;
     color: #222623;
 }
-
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #222623;
+}
 p {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     color: #444A44;
 }
-
-/* === Navigation === */
 nav {
-    margin: 2.5rem 0 2rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid #D3D9D5; /* Mid-tone divider */
+    margin: 40px 0 32px;
+    padding-top: 20px;
+    border-top: 1px solid #D3D9D5;
 }
-
 nav a {
-    color: #666E67; /* Medium-dark — subtle but readable */
+    color: #666E67;
     text-decoration: none;
-    margin: 0 1rem;
-    font-size: 1.05rem;
+    margin: 0 16px;
+    font-size: 17px;
     font-weight: 500;
-    padding: 0.35rem 0.6rem;
+    padding: 6px 10px;
     border-radius: 4px;
     transition: all 0.2s ease;
 }
-
 nav a:hover {
-    color: #222623; /* Deep tone on hover — adds focus */
-    background-color: #E6EBE8; /* Light hover tint — gentle feedback */
+    color: #222623;
+    background-color: #E6EBE8;
 }
-
-/* === Blog Posts === */
+/* Content */
 #texts {
-    margin-top: 2.5rem;
+    margin-top: 40px;
 }
-
 article {
     background: #FFFFFF;
-    padding: 2rem;
-    margin-bottom: 2.5rem;
+    padding: 32px;
+    margin-bottom: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(34, 38, 35, 0.04);
     border-left: 4px solid #AEB5B0;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
-
 article:hover {
-    transform: translateY(-2px);
+    transform: translateY(-10px) scale(1.2);
     box-shadow: 0 4px 12px rgba(34, 38, 35, 0.08);
     background-color: #F8FAF9;
 }
-
 article h2 {
     color: #222623;
-    text-align: left; /* Keep headings left-aligned */
+    text-align: left;
 }
-
 article p {
     color: #444A44;
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 2;
-    text-align: justify !important; /* Explicitly justify paragraph text */
-    text-justify: inter-word; /* Better word spacing for justification */
+    text-align: justify !important;
+    text-justify: inter-word;
 }
-
 article p em {
     color: #89918B;
-    font-size: 0.9rem;
+    font-size: 14px;
     font-style: italic;
-    text-align: center; /* Keep metadata left-aligned */
-    display: block; /* Make em elements block-level */
+    text-align: center;
+    display: block;
 }
-
-/* === Status Messages === */
+/* Status Messages */
 #texts p {
     font-style: italic;
     color: #89918B;
     text-align: center;
-    padding: 2rem;
-    background-color: #E6EBE8; /* Light container */
+    padding: 32px;
+    background-color: #E6EBE8;
     border-radius: 8px;
     border: 1px solid #D3D9D5;
 }
-
-/* === Accents & Highlights === */
 strong, b {
-    color: #222623; /* Deep tone for emphasis */
+    color: #222623;
     font-weight: 600;
 }
-
-/* === Subtle Dividers or Rules === */
-hr {
-    border: 0;
-    height: 1px;
-    background: #D3D9D5;
-    margin: 2rem 0;
-}
-
